@@ -12,5 +12,10 @@
   "homepage": "https://github.com/bryanjhv/express-readme",
   "license": "MIT",
   "author": "Bryan Horna <bryanjhv@gmail.com> (https://bryanjhv.github.io)",
-  "repository": "bryanjhv/express-readme"
+  "main": "index.js",
+  "repository": "bryanjhv/express-readme",
+  "dependencies": {
+    "github-markdown-css": "2.4.1",
+    "marked": "0.3.6"
+  }
 }
