@@ -1,0 +1,16 @@
+{
+  "name": "express-readme",
+  "version": "0.0.1",
+  "description": "Serve your README.md as GitHub would do within Express 4.",
+  "keywords": [
+    "express",
+    "readme",
+    "github",
+    "markdown",
+    "gfm"
+  ],
+  "homepage": "https://github.com/bryanjhv/express-readme",
+  "license": "MIT",
+  "author": "Bryan Horna <bryanjhv@gmail.com> (https://bryanjhv.github.io)",
+  "repository": "bryanjhv/express-readme"
+}
