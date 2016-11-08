@@ -36,6 +36,24 @@ require('express-readme')(app, {
 ```
 
 
+## Warnings
+
+There are some limitations when using this package, which include:
+
+* If a relative path was passed to `filename`, it will be resolved from the
+  process current directory.
+* If the `README.md` was not found, a simple `404` is sent back.
+* The operations are performed in a **synchronous** way.
+
+
+## TODO
+
+* Support [other formats](https://github.com/github/markup) to emulate GitHub's
+  true `README` rendering.
+* Implement **asynchronous** operations whenever possible.
+* Test with older [Express][http://expressjs.com] versions.
+
+
 ## License
 
 This project is released under the [MIT License](LICENSE.txt).
