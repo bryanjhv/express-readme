@@ -1,6 +1,7 @@
 /** REQUIRES **/
 
-var marked = require('marked');
+var marked  = require('marked'),
+    textile = require('textile-js');
 
 
 /** CONFIGURATION **/
@@ -38,3 +39,4 @@ function register(types, converter) {
 /** CONVERTERS **/
 
 register('markdown mdown mkdn md'.split(' '), marked);
+register('textile', textile);

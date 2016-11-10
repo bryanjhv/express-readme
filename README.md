@@ -1,6 +1,6 @@
 # Express README
 
-Serve your `README.md` as GitHub would do within your Express 4 app.
+Serve your `README` as GitHub would do within your Express 4 app.
 
 
 ## Usage
@@ -19,8 +19,8 @@ require('express-readme')(app);
 
 You can pass two options:
 
-* **`filename`**: The path to the `README.md` you want to serve. Can be relative
-  or absolute.
+* **`filename`**: The path to the `README` you want to serve. Can be relative or
+  absolute.
 * **`routes`**: The routes the package should respond to. Can be a string or
   array of routes.
 
@@ -36,24 +36,38 @@ require('express-readme')(app, {
 ```
 
 
+## Markup support
+
+For now, the package only supports following markup formats:
+
+* Markdown (`.markdown`, `.mdown`, `.mkdn`, `.md`)
+* Textile (`.textile`)
+
+Other formats will be added as well, to make it match with the others that you
+[can use][fmts] with GitHub.
+
+
 ## Warnings
 
 There are some limitations when using this package, which include:
 
 * If a relative path was passed to `filename`, it will be resolved from the
   process current directory.
-* If the `README.md` was not found, a simple `404` is sent back.
+* If the `README` was not found, a simple `404` is sent back.
+* If the markup for your `README` isn't implemented, an error will be `throw`n.
 * The operations are performed in a **synchronous** way.
 
 
 ## TODO
 
-* Support [other formats](https://github.com/github/markup) to emulate GitHub's
-  true `README` rendering.
+* Support [other formats][fmts] to emulate GitHub's true `README` rendering.
 * Implement **asynchronous** operations whenever possible.
-* Test with older [Express][http://expressjs.com] versions.
+* Test with older [Express](http://expressjs.com) versions.
 
 
 ## License
 
 This project is released under the [MIT License](LICENSE.txt).
+
+
+[fmts]: https://github.com/github/markup
