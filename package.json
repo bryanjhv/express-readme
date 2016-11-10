@@ -1,12 +1,13 @@
 {
   "name": "express-readme",
-  "version": "0.0.3",
-  "description": "Serve your README.md as GitHub would do within Express 4.",
+  "version": "0.0.4",
+  "description": "Serve your README as GitHub would do within Express 4.",
   "keywords": [
     "express",
     "readme",
     "github",
     "markdown",
+    "textile",
     "gfm"
   ],
   "homepage": "https://github.com/bryanjhv/express-readme",
