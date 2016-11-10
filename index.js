@@ -2,8 +2,8 @@
 
 var fs       = require('fs'),
     path     = require('path'),
-    markdown = require('marked'),
-    cssPath  = require.resolve('github-markdown-css');
+    cssPath  = require.resolve('github-markdown-css'),
+    convert  = require('./convert');
 
 
 /** CONFIGURATION **/
@@ -33,14 +33,19 @@ function expressReadme(app, opts) {
 
   routes.forEach(function (route) {
     app.get(route, function (req, res) {
-      var html = tplText.substr(0);
-      html = html.replace('{{filename}}', path.basename(filename));
-
       var exists = fs.existsSync(filename);
       if (!exists) return res.sendStatus(404);
 
-      var content = markdown(fs.readFileSync(filename, 'utf8'));
+      var info = path.parse(filename);
+
+      var text    = fs.readFileSync(filename, 'utf8'),
+          type    = info.ext.substr(1),
+          content = convert(type, text);
+
+      var html = tplText.substr(0);
       html = html.replace('{{content}}', content);
+      html = html.replace('{{filename}}', info.base);
+
       res.status(200).type('html').end(html);
     });
   });
