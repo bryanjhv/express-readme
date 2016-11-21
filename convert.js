@@ -1,7 +1,8 @@
 /** REQUIRES **/
 
 var marked  = require('marked'),
-    textile = require('textile-js');
+    textile = require('textile-js'),
+    asdoc   = require('asciidoctor.js')();
 
 
 /** CONFIGURATION **/
@@ -40,3 +41,23 @@ function register(types, converter) {
 
 register('markdown mdown mkdn md'.split(' '), marked);
 register('textile', textile);
+register('asciidoc adoc asc'.split(' '), (function () {
+  var Opal        = asdoc.Opal,
+      AsciiDoctor = asdoc.Asciidoctor;
+
+  var processor = AsciiDoctor(true);
+
+  Opal.Asciidoctor.Compliance.unique_id_start_index = 1;
+
+  var options = Opal.hash2(['safe', 'attributes'], {
+    safe: Opal.Symbol.$new('secure'),
+    attributes: [
+      'showtitle=@', 'idprefix', 'idseparator=-', 'env=github',
+      'env-github', 'source-highlighter=html-pipeline'
+    ]
+  });
+
+  return function (text) {
+    return processor.$convert(text, options);
+  };
+})());

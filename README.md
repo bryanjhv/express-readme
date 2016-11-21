@@ -42,6 +42,7 @@ For now, the package only supports following markup formats:
 
 * Markdown (`.markdown`, `.mdown`, `.mkdn`, `.md`)
 * Textile (`.textile`)
+* AsciiDoc (`.asciidoc`, `.adoc`, `.asc`)
 
 Other formats will be added as well, to make it match with the others that you
 [can use][fmts] with GitHub.
@@ -70,4 +71,4 @@ There are some limitations when using this package, which include:
 This project is released under the [MIT License](LICENSE.txt).
 
 
-[fmts]: https://github.com/github/markup
+[fmts]: https://github.com/github/markup#markups
