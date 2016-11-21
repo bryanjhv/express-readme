@@ -17,12 +17,15 @@ require('express-readme')(app);
 
 ### Options
 
-You can pass two options:
+You can pass three options:
 
 * **`filename`**: The path to the `README` you want to serve. Can be relative or
   absolute.
 * **`routes`**: The routes the package should respond to. Can be a string or
   array of routes.
+* **`processorOpts`**: If you know the processor used for your markup and want
+  to customize the output it produces (i.e. the package), then pass this with
+  the desired options.
 
 ```js
 // Create an Express app
