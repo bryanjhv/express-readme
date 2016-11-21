@@ -1,6 +1,6 @@
 {
   "name": "express-readme",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Serve your README as GitHub would do within Express 4.",
   "keywords": [
     "express",
