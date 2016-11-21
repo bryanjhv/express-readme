@@ -13,7 +13,7 @@
   "homepage": "https://github.com/bryanjhv/express-readme",
   "license": "MIT",
   "author": "Bryan Horna <bryanjhv@gmail.com> (https://bryanjhv.github.io)",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": "bryanjhv/express-readme",
   "dependencies": {
     "asciidoctor.js": "1.5.2",
