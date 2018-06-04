@@ -1,4 +1,4 @@
-# Express README
+# Express README &nbsp;&nbsp;&nbsp; [![Donate][paybtn]][paylnk]
 
 Serve your `README` as GitHub would do within your Express 4 app.
 
@@ -75,3 +75,6 @@ This project is released under the [MIT License](LICENSE.txt).
 
 
 [fmts]: https://github.com/github/markup#markups
+
+[paybtn]: https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif
+[paylnk]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DVB7SSMVSHGTN
