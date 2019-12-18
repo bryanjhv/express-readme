@@ -18,7 +18,7 @@
   "dependencies": {
     "asciidoctor.js": "1.5.2",
     "github-markdown-css": "2.4.1",
-    "marked": "0.3.6",
+    "marked": "0.7.0",
     "textile-js": "2.0.1"
   }
 }
